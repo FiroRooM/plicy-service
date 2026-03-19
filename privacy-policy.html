@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プライバシーポリシー — PatchLOL</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #1a1a1a; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+    ul { padding-left: 1.25rem; }
+    .muted { color: #555; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>プライバシーポリシー（PatchLOL）</h1>
+  <p class="muted">最終更新日: 2026年3月19日</p>
+
+  <p>本ポリシーは、Discord ボット「PatchLOL」（以下「本ボット」）の利用にあたり、どのような情報が関係するかを説明するものです。本ボットはオープンソースの自己ホスト型です。実際にデータを処理するのは、<strong>ボットを起動している当事者（サーバー管理者・運用者）</strong>です。</p>
+
+  <h2>1. 本ボットが扱う情報（運用者の環境）</h2>
+  <p>運用者が本ボットを動かす際、次の情報が運用者のマシンまたはホストに保存されることがあります。</p>
+  <ul>
+    <li><strong>Discord ボットトークン</strong>（環境変数または <code>.env</code>）— Discord API への認証にのみ使用します。</li>
+    <li><strong>サーバー ID とチャンネル ID</strong>（<code>patch_guild_channels.json</code> 等）— <code>/patch set</code> で指定した通知先を記録します。</li>
+    <li><strong>パッチ通知の状態</strong>（<code>patch_state.json</code>）— 最後に通知した LoL/TFT のパッチ情報・送信済みチャンネル ID などを重複送信防止のため保存します。</li>
+  </ul>
+  <p>これらは<strong>Discord 社のサーバー上に本ボット作者が収集・保管するものではありません</strong>。運用者の責任で管理してください。</p>
+
+  <h2>2. Discord 経由で送信される情報</h2>
+  <ul>
+    <li>本ボットは、設定されたテキスト／お知らせチャンネルに、Riot Games 公式サイトから取得したパッチノートに関するメッセージ（埋め込み・画像等）を投稿します。</li>
+    <li>スラッシュコマンド <code>/patch</code> 利用時、Discord が定める範囲でコマンド実行者・サーバー情報がインタラクションとして本ボットに渡ります（権限確認等）。</li>
+  </ul>
+
+  <h2>3. 第三者サービス</h2>
+  <ul>
+    <li><strong>Discord</strong> — 利用規約・プライバシーは <a href="https://discord.com/privacy" rel="noopener">Discord プライバシーポリシー</a> に従います。</li>
+    <li><strong>Riot Games（leagueoflegends.com 等）</strong> — パッチ一覧・パッチノートページの取得に利用します。取得は公開 Web ページへの HTTP リクエストです。</li>
+  </ul>
+
+  <h2>4. お問い合わせ</h2>
+  <p>本ポリシーはリポジトリ管理者が定めます。連絡先は、本ボットを配布している GitHub リポジトリの Issue 等をご利用ください（運用者ごとに異なります）。</p>
+</body>
+</html>
